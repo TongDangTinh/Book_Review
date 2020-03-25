@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :books
-  root "books#index"
+  scope "(:locale)", locale: /en|vi/ do 
+    resources :books
+    root "books#index"
+  end
 end
