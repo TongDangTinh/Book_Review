@@ -1,28 +1,47 @@
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <%= link_to "Book Reviews", root_path, class: "navbar-brand" %>
+      <%= link_to t(".book_reviews"), root_path, 
+        class: "navbar-brand text-muted" %>
     </div>
 
     <ul class="nav mr-auto">
-      <li class="mr-3">
-        <%= link_to "Sign Up", new_user_registration_path,class: "text-muted" %>
-      </li>
       <% if user_signed_in? %>
         <li>
-          <%= link_to "Sign Out", destroy_user_session_path, method: :delete, 
-            class: "text-muted" %>
+          <%= link_to t(".log_out"), destroy_user_session_path, 
+          method: :delete, class: "text-muted" %>
         </li>
       <% else %>
+        <li class="mr-3">
+          <%= link_to t(".sign_up"), new_user_registration_path,  
+            class: "text-muted" %>
+        </li>
         <li>
-          <%= link_to "Log In", new_user_session_path, class: "text-muted" %>
+          <%= link_to t(".log_in"), new_user_session_path, 
+            class: "text-muted" %>
         </li>
       <% end %>
     </ul>
-
+    
     <ul class="nav">
+      <li class="dropdown mr-5">
+        <a href="#" class="dropdown-toggle text-muted" data-toggle="dropdown" 
+          role="button" aria-expended="false"><%= t(".category") %>
+          <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <% Category.all.each do |category| %>
+            <li class="<%= 'active' if params[:category] == category.name %>">
+              <%= link_to category.name, books_path(category: category.name), 
+                class: "link text-secondary" %>
+            </li>
+          <% end %>
+        </ul>
+      </li>
+
       <% if user_signed_in? %>
-        <li><%= link_to "Add book", new_book_path %></li>
+        <li>
+          <%= link_to t(".add_book"), new_book_path, class: "text-muted" %>
+        </li>
       <% end %>
     </ul>
   </div>
