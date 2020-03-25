@@ -8,6 +8,7 @@ en:
     # View books
     index: 
       add_book: "Add Book"
+      the_are_no: "The are no books currently in this category"
     show:
       are_you_sure: "Are you sure?"
       back: "Back"
@@ -27,3 +28,14 @@ en:
     error_messages:
       the_form_contains: "The form contains"
       error: "error"
+
+  # Layouts
+  layouts:
+    header:
+      book_reviews: "Book Reviews"
+      sign_up: "Sign up"
+      log_in: "Log in"
+      log_out: "Log out"
+      add_book: "Add book"
+      category: "Categories"
+      setting: "Setting"

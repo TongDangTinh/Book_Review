@@ -8,6 +8,7 @@ vi:
     #View books
     index: 
       add_book: "Thêm Sách"
+      the_are_no: "Hiện tại không có loại sách"
     show:
       are_you_sure: "Bạn có chắc chắn xoá sách?"
       back: "Trở Lại"
@@ -22,8 +23,19 @@ vi:
       description: "Mô Tả"
       author: "Tác Giả"
 
- # Shared
+  # Shared
   shared:
     error_messages:
       the_form_contains: "Bao gồm "
       error: "lỗi"
+
+  # Layouts
+  layouts:
+    header:
+      book_reviews: "Đánh Giá Sách"
+      sign_up: "Đăng ký"
+      log_in: "Đăng nhập"
+      log_out: "Đăng xuất"
+      add_book: "Thêm sách"
+      category: "Các loại sách"
+      setting: "Cài đặt người dùng"
