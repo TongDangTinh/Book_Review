@@ -17,6 +17,11 @@ vi:
       create_book: "Tạo Sách"
     edit: 
       edit_book: "Cập Nhật Sách"
+    form: 
+      title: "Tiêu Đề Của Sách"
+      description: "Mô Tả"
+      author: "Tác Giả"
+
  # Shared
   shared:
     error_messages:
