@@ -10,6 +10,7 @@ gem "sass-rails", "~> 5.0"
 gem "bootstrap", "~> 4.4.1"
 gem "font-awesome-rails"
 gem "jquery-rails"
+gem "rails-i18n", "~> 5.1"
 gem "uglifier", ">= 1.3.0"
 
 gem "coffee-rails", "~> 4.2"

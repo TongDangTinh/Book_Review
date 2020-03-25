@@ -1,0 +1,24 @@
+vi:
+  # Books
+  books:
+    # Controller
+    book_created: "Sách vừa được tạo!"
+    book_updated: "Sách vừa được cập nhật!"
+    book_deleted: "Sách vừa được xoá!"
+    #View books
+    index: 
+      add_book: "Thêm Sách"
+    show:
+      are_you_sure: "Bạn có chắc chắn xoá sách?"
+      back: "Trở Lại"
+      edit: "Cập Nhập"
+      delete: "Xoá"
+    new:
+      create_book: "Tạo Sách"
+    edit: 
+      edit_book: "Cập Nhật Sách"
+ # Shared
+  shared:
+    error_messages:
+      the_form_contains: "Bao gồm "
+      error: "lỗi"

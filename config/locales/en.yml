@@ -30,4 +30,29 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # hello: "Hello world"
+
+  # Books
+  books:
+    # Controller
+    book_created: "Book created!"
+    book_updated: "Book updated!"
+    book_deleted: "Book deleted!"
+    # View books
+    index: 
+      add_book: "Add Book"
+    show:
+      are_you_sure: "Are you sure?"
+      back: "Back"
+      edit: "Edit"
+      delete: "Delete"
+    new:
+      create_book: "Create Book"
+    edit: 
+      edit_book: "Edit Book"
+
+  # Shared
+  shared:
+    error_messages:
+      the_form_contains: "The form contains"
+      error: "error"
