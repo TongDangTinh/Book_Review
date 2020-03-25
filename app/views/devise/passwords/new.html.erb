@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h2><%= t(".forgot_your_password") %></h2>
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), 
+      html: { method: :post }) do |f| %>
+
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field mt-3">
+        <%= f.label :email, t(".email"), class: "text-info" %><br />
+        <%= f.email_field :email, placeholder: t(".email"), autofocus: true, 
+          autocomplete: t(".email"), class: "form-control" %>
+      </div>
+
+      <div class="actions mt-3">
+        <%= f.submit t(".send_me_reset_password_instructions"),   
+          class: "btn btn-outline-secondary form-control" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
