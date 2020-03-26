@@ -1,31 +1,36 @@
-<% provide :button_text, t(".edit_book") %>
+<div class="col-md-6 offset-md-3">
+  <div class="edit-book-form">
+    <% provide :button_text, t(".edit_book") %>
 
-<%= form_for @book, html: { multipart: true } do |f| %>
-  <%= render "shared/error_messages" %>
-  <%= f.select :category_id, @categories %>
-  <div class="field mt-3">
-    <%= f.file_field :book_img %>
-  </div>
-  
-  <div class="field mt-3">
-    <%= f.label :title, t(".title"), class: "text-info" %>
-    <%= f.text_field :title, placeholder: t(".title"), class: "form-control" %>
-  </div>
+    <%= form_for @book, html: { multipart: true } do |f| %>
+      <%= render "shared/error_messages" %>
+      <%= f.select :category_id, @categories %>
+      <div class="field mt-3">
+        <%= f.file_field :book_img %>
+      </div>
+      
+      <div class="field mt-3">
+        <%= f.label :title, t(".title"), class: "text-info" %>
+        <%= f.text_field :title, placeholder: t(".title"), class: "form-control" %>
+      </div>
 
-  <div class="field mt-3">
-    <%= f.label :description, t(".description"), class: "text-info" %>
-    <%= f.text_area :description, placeholder: t(".description"),
-      class: "form-control" %>
-  </div>
-  
-  <div class="field mt-3">
-    <%= f.label :author, t(".author"), class: "text-info" %>
-    <%= f.text_field :author, placeholder: t(".author"), 
-      class: "form-control" %>
-  </div>
+      <div class="field mt-3">
+        <%= f.label :description, t(".description"), class: "text-info" %>
+        <%= f.text_area :description, placeholder: t(".description"),
+          class: "form-control" %>
+      </div>
+      
+      <div class="field mt-3">
+        <%= f.label :author, t(".author"), class: "text-info" %>
+        <%= f.text_field :author, placeholder: t(".author"), 
+          class: "form-control" %>
+      </div>
 
-  <div class="field mt-3">
-    <%= f.submit yield(:button_text), class: "btn btn-primary form-control" %>
+      <div class="field mt-3">
+        <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+      </div>
+     
+    <% end %>
   </div>
- 
-<% end %>
+</div>
+
