@@ -1,5 +1,6 @@
-<div class="row">
-  <div class="col-md-6 offset-md-3">
+
+<div class="col-md-6 offset-md-3">
+  <div class="signup-form">
     <h2 class="text-center"><%= t(".sign_up") %></h2>
 
     <%= form_for(resource, as: resource_name, 
@@ -36,11 +37,11 @@
 
       <div class="actions mt-3">
         <%= f.submit t(".sign_up"), 
-          class: "btn btn-outline-primary form-control" %>
+          class: "btn btn-outline-primary" %>
       </div>
     <% end %>
 
     <%= render "devise/shared/links" %>
-
   </div>
 </div>
+
